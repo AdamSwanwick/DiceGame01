@@ -4,7 +4,7 @@ class Dice{
    this.ypos = ypos
    this.size = size
    this.corner = corner
-   this.dotsize = size *0.3
+   
    
    this.value = this.Diceroll(1,6)
    
@@ -31,10 +31,43 @@ class Dice{
          strokeWeight(10)
          point (this.xpos+20,this.ypos+20)
          point (this.xpos+40,this.ypos+40)
-       
+        
+       }
+     
+     if(this.value ===3){
+       strokeWeight(10)
+       point (this.xpos+10,this.ypos+10)
+       point (this.xpos+30,this.ypos+30)
+       point (this.xpos+50,this.ypos+50)
      }
     
+     if(this.value === 4){
+       strokeWeight(10)
+       point (this.xpos+10,this.ypos+10)
+       point (this.xpos+50,this.ypos+10)
+       point (this.xpos+10,this.ypos+50)
+       point (this.xpos+50,this.ypos+50)
+     }
      
+      if(this.value === 5){
+       strokeWeight(10)
+       point (this.xpos+10,this.ypos+10)
+       point (this.xpos+50,this.ypos+10)
+       point (this.xpos+10,this.ypos+50)
+       point (this.xpos+50,this.ypos+50)
+       point (this.xpos+30,this.ypos+30)
+      }
+     
+     if(this.value === 6){
+       strokeWeight(10)
+       point (this.xpos+10,this.ypos+10)
+       point (this.xpos+50,this.ypos+10)
+       point (this.xpos+10,this.ypos+50)
+       point (this.xpos+50,this.ypos+50)
+       point (this.xpos+10,this.ypos+30)
+       point (this.xpos+50,this.ypos+30)
+       
+     }
          
      
      
@@ -44,14 +77,20 @@ class Dice{
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }        
 }
-let dice1 = new Dice (20,20,60,5)
-let dice2 = new Dice (100,20,60,5)
+let dice1 = new Dice (10,20,60,5)
+let dice2 = new Dice (90,20,60,5)
+let dice3 = new Dice(170,20,60,5)
+let dice4 = new Dice(250,20,60,5)
+let dice5 = new Dice(330,20,60,5)
 
 
 
   function draw(){
   dice1.drawdice()
   dice2.drawdice()
+  dice3.drawdice()
+  dice4.drawdice()
+  dice5.drawdice()
   }
   
 
@@ -63,12 +102,6 @@ function setup() {
   createCanvas(400,400);
    background('rgba(11,207,34,0.89)')
 }
-
-  
- 
-  
- 
-    
  
       
     
