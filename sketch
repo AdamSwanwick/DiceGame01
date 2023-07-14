@@ -1,50 +1,61 @@
 class Dice{
-   constructor(xpos,ypos,size,corner,button){
+   constructor(xpos,ypos,size,corner){
    this.xpos = xpos
    this.ypos = ypos
    this.size = size
    this.corner = corner
+   this.value = 0
    
+     
   
   } 
 
-    
-draw(){
-    square(this.xpos,this.ypos,this.size,this.corner)
-           }
-        }           
+   drawdice(){
+
+     square(this.xpos,this.ypos,this.size,this.corner)
+   }
+     Diceroll(min,max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }        
+}
 let dice1 = new Dice (20,20,60,5)
 let dice2 = new Dice (100,20,60,5)
-let dice3 = new Dice (180,20,60,5)
 
 
+function draw(){
+dice1.drawdice()
+  dice2.drawdice()
 
 
-
- function diceroll(min,max){
-  return Math.floor(Math.random()*(max - min +1)+min)
   
-}
-randNum = diceroll(1,6)
-console.log(randNum)
-randNum = diceroll(1,6)
-console.log(randNum)
-randNum = diceroll(1,6)
-console.log(randNum)
 
+
+
+}
+  console.log(dice1.Diceroll(1,6))
+ 
+  
+  
 function setup() {
   createCanvas(400,400);
-   Button = createButton('Lets Roll')
+   background('rgba(11,207,34,0.89)')
   
  
   
-}
 
-function draw() {
-  background('rgba(0,180,0,0.25)')
-  dice1.draw()
-  dice2.draw()
-  dice3.draw()
+
+ 
+    
+ 
+      
+    
+ 
+    
+    
+  
+  
+   
+
 
 
 
