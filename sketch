@@ -4,15 +4,41 @@ class Dice{
    this.ypos = ypos
    this.size = size
    this.corner = corner
-   this.value = 0
+   this.dotsize = size *0.3
    
-     
+   this.value = this.Diceroll(1,6)
+   
   
-  } 
+    
+    console.log(this.value) //    
+     
+   }       
+  
+
 
    drawdice(){
-
+   strokeWeight(1)
      square(this.xpos,this.ypos,this.size,this.corner)
+     
+       
+     
+     if(this.value === 1){
+         strokeWeight(10)
+         point(this.xpos +30,this.ypos+30)}
+       
+       
+        if(this.value === 2){
+         strokeWeight(10)
+         point (this.xpos+20,this.ypos+20)
+         point (this.xpos+40,this.ypos+40)
+       
+     }
+    
+     
+         
+     
+     
+     
    }
      Diceroll(min,max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -22,28 +48,25 @@ let dice1 = new Dice (20,20,60,5)
 let dice2 = new Dice (100,20,60,5)
 
 
-function draw(){
-dice1.drawdice()
+
+  function draw(){
+  dice1.drawdice()
   dice2.drawdice()
-
-
+  }
   
 
 
-
-}
-  console.log(dice1.Diceroll(1,6))
  
   
   
 function setup() {
   createCanvas(400,400);
    background('rgba(11,207,34,0.89)')
+}
+
   
  
   
-
-
  
     
  
@@ -61,4 +84,3 @@ function setup() {
 
 
 
-}
