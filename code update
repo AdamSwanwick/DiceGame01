@@ -1,0 +1,150 @@
+class Dice{
+   constructor(xpos,ypos,size,corner,dicename){
+   this.xpos = xpos
+   this.ypos = ypos
+   this.size = size
+   this.corner = corner
+   this.dicename = dicename
+   this.value = floor(random(1,7));
+   
+  
+    
+  
+  
+  this.button = createButton(this.dicename + '🎲')    
+  this.button.mousePressed(()=> { this.Diceroll(1,6)})
+   this.button.position(this.xpos, this.ypos+2c00)
+     
+   }      
+
+ 
+ 
+   drawdice(){
+    
+   strokeWeight(1)
+     square(this.xpos,this.ypos,this.size,this.corner)
+     // square(this.xpos,this.ypos + 100, this.size,this.corner)
+                  
+
+     if(this.value === 1){
+         strokeWeight(10)
+         point(this.xpos +30,this.ypos+30)
+         
+        // strokeWeight(10)
+        // point(this.xpos+30,this.ypos+130)
+         
+     
+   
+         
+      
+    } if(this.value === 2){
+      strokeWeight(10)
+         point (this.xpos+20,this.ypos+20)
+         point (this.xpos+40,this.ypos+40)
+        
+         
+    } if(this.value === 3){
+      strokeWeight(10)
+       point (this.xpos+10,this.ypos+10)
+       point (this.xpos+30,this.ypos+30)
+       point (this.xpos+50,this.ypos+50)
+    } if(this.value === 4){
+        strokeWeight(10)
+       point (this.xpos+10,this.ypos+10)
+       point (this.xpos+50,this.ypos+10)
+       point (this.xpos+10,this.ypos+50)
+       point (this.xpos+50,this.ypos+50)
+      
+    } if(this.value === 5){
+       strokeWeight(10)
+       point (this.xpos+10,this.ypos+10)
+       point (this.xpos+50,this.ypos+10)
+       point (this.xpos+10,this.ypos+50)
+       point (this.xpos+50,this.ypos+50)
+       point (this.xpos+30,this.ypos+30)
+    
+     
+    } if(this.value === 6){
+    strokeWeight(10)
+       point (this.xpos+10,this.ypos+10)
+       point (this.xpos+50,this.ypos+10)
+       point (this.xpos+10,this.ypos+50)
+       point (this.xpos+50,this.ypos+50)
+       point (this.xpos+10,this.ypos+30)
+       point (this.xpos+50,this.ypos+30)
+    }
+       
+   }   
+     drawdiceb(){
+    
+   strokeWeight(1)
+     square(this.xpos,this.ypos,this.size,this.corner)
+                  
+
+     if(this.value === 1){
+         strokeWeight(10)
+         point(this.xpos +30,this.ypos+30)
+         
+     
+   
+         
+      
+    } if(this.value === 2){
+      strokeWeight(10)
+         point (this.xpos+20,this.ypos+20)
+         point (this.xpos+40,this.ypos+40)
+        
+         
+    } if(this.value === 3){
+      strokeWeight(10)
+       point (this.xpos+10,this.ypos+10)
+       point (this.xpos+30,this.ypos+30)
+       point (this.xpos+50,this.ypos+50)
+    } if(this.value === 4){
+        strokeWeight(10)
+       point (this.xpos+10,this.ypos+10)
+       point (this.xpos+50,this.ypos+10)
+       point (this.xpos+10,this.ypos+50)
+       point (this.xpos+50,this.ypos+50)
+      
+    } if(this.value === 5){
+       strokeWeight(10)
+       point (this.xpos+10,this.ypos+10)
+       point (this.xpos+50,this.ypos+10)
+       point (this.xpos+10,this.ypos+50)
+       point (this.xpos+50,this.ypos+50)
+       point (this.xpos+30,this.ypos+30)
+    
+     
+    } if(this.value === 6){
+    strokeWeight(10)
+       point (this.xpos+10,this.ypos+10)
+       point (this.xpos+50,this.ypos+10)
+       point (this.xpos+10,this.ypos+50)
+       point (this.xpos+50,this.ypos+50)
+       point (this.xpos+10,this.ypos+30)
+       point (this.xpos+50,this.ypos+30)
+    }
+     
+     
+     
+     
+       textSize(10)
+         text( this.dicename + ' Rolled ' + this.value,this.xpos,this.ypos+ 50) 
+         
+        
+  
+  
+   }    
+   
+  Diceroll(min,max) {
+    this.value =floor(random(1,7));
+    
+  
+   }
+
+
+
+
+
+}
